@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>special selection test</title>
+	 <link rel="stylesheet" href="projet.css" />
+	 <style type="text/css">
+	 	.sec-menu{
+          position: relative;
+        background-image: url('shape-5.png'),url('shape-6.png');
+       background-repeat: no-repeat; /* Prevent images from repeating */
+        background-position:0% 0%, 100% 100%;/* Position images side-by-side */
+        animation: moveBackground-2 10s ease-in-out infinite ;
+       padding-block: 70px;
+        overflow: hidden;
+	 	}
+	
+      @keyframes moveBackground-2 {
+      0%,100% { background-position:0% 0%, 100% 100%; }
+      50% { background-position: 0% 10%,100% 90%; } 
+      }
+      .menu{
+      	display:flex;
+      	flex-direction: column;
+      	align-content: center;
+      	align-items: center;
+      	margin-block:-10px;
+      	margin-inline:auto;
+      	padding: 80px;
+     
+      	width:90%;
+      }
+      .menu .para{
+      	width:400px;
+      	display:flex;
+      	flex-direction: row;
+      	gap:7px;
+      	align-items: center;
+      	justify-content: center;
+      }
+      .para .prix{
+      	color:var(--gold);
+      }
+      .grid-list{
+      	display:grid;
+      	grid-template-columns: auto auto;
+      	gap:50px 150px;
+      	padding:0px;
+      	border:2px solid red;
+      	list-style-type: none;
+      	position: relative;
+      }
+      .grid-list::before{
+      	content: "";
+      	position: absolute;
+      	top:0px;
+      	left:50%;
+      	bottom:0%;
+      	height: 295px;
+       border-inline: 1px solid #272525;
+
+
+      }
+       .menu-li-card:hover .imgcard{
+      	 opacity: 0.7;
+         transform: scale(1.05);
+      }
+      .menu-li-card{
+      	height: 120px;
+      	display: flex;
+      	flex-direction: row;
+      }
+      .imgcard{
+      	height: 120px;
+      	width: 120px;
+        border-radius: 30px;
+      }
+      .menu-li-card .serviceTiltle{
+      	font-size: 1.8em;
+      	text-align: left;
+      }
+      .menu-li-card .serviceTiltle:hover a{
+      	color: var(--gold);
+      }
+      .description{
+      	width:400px;
+      	height: 50px;
+      	display:flex;
+      	flex-direction: row;
+      	align-items: center;
+       justify-content: space-between;
+      	margin-top: 5px;
+      	padding-top: 5px;
+      	position:relative;
+      }
+      .description::after{
+      	content: "";
+        position: absolute;
+      	left: 100px;
+        bottom: 20px;
+        height: 5px;
+      }
+      .menu-description{
+      	width:400px;
+      	color:white;
+      	line-height: 1.2em;
+      	font-family: var(--font2),sans-serif;
+      	font-size: 0.8em;
+      	letter-spacing: 2px;
+      	margin-top:20px;
+      	margin-left:10px;
+      }
+
+      .menu-op{
+      	padding: 0px;
+      	margin-right: 0px;
+      	height: 50px;
+      	display:inline-flex;
+      	align-items: center;
+      }
+      .description .prix{
+      	color:var(--gold);
+      	font-size: 1.5em;
+      	display:flex;
+      	flex-grow: 1;
+      	justify-content: flex-end;
+        position: relative;
+        gap: 15px
+      	
+      }
+     .description .prix::before{
+      	content: "";
+        height: 5px;
+       border-block: 1px solid black;
+     flex-grow:1;
+      }
+      .menu-span{
+      	background-color: var(--gold);
+      	font-family: var(--font1);
+      	font-size: 0.8em; 
+      	padding:5px;
+      }
+  
+       
+	 </style>
+</head>
+<body>
+   <section class="sec-menu menu about" >
+            <div class="serviscon">
+            	<p class="para1">Appetizers</p>
+            </div>
+
+            <ul class="grid-list">
+
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent3.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Salade aux restes de crevettes</a>
+                        </h3>
+                    </div>
+                    <span class="prix">30.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Salade, orange, le jus de ½ citron frais, huile d’olive,  vinaigre balsamique, moutarde en grains.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent5.webp" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Ceviche de merlan</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">20.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+           <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent2.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Butternut Pumpkin</a>
+                        </h3>
+                    
+                    </div>
+                    <span class="prix">15.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent4.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Tokusen Wagyu</a>
+                        </h3>
+                    </div>
+                    <span class="prix">30.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+            
+        </ul>
+         
+        
+        </section>
+</body>
+</html>

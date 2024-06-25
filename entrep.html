@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grilli</title>
+	<link rel="stylesheet" href="projet.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+        	.grilli{
+        		padding-top: 100px;
+        		display: flex;
+           justify-content: center;
+         align-items: center;
+          height: 100vh;
+         /*background-color: #f0f0f0;*/
+        	}
+        	.slideshow-container {
+    text-align: center;
+}
+
+.main-image img {
+    width: 600px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+        
+        </style>
+  <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+    const mainImage = document.getElementById('displayed-image');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            mainImage.src = thumbnail.src;
+        });
+    });
+});
+
+  </script>
+</head>
+<body>
+ <header><div class="logo" ><a href="project.html"><img src="logo.svg" ></a></div>
+        <nav>
+          
+            <ul>
+                <li ><a href="project.html">HOME</a></li>
+                <li class="dropdown"><a class="dropbtn" href="#lacarte">MENU</a>
+                <div class="dropdown-content"><a href="#lacarte">la carte</a>
+                    <a href="menu.html">menu</a>
+                    </div></li>
+                <li class="dropdown" ><a class="dropbtn" href="chef.html">OUR CHEFS</a></li>
+                <li class="dropdown"><a class="dropbtn" href="#whychooseus">privatisation</a>
+                <div  class="dropdown-content"><a href="entrep.html">Entreprise laboratoire</a>
+                    <a href="eventpriv.html">Evenment prive </a>
+                    <a href="priv.html">privatisation</a>
+                </div>
+                </li>
+                <li class="dropdown"><a  class="dropbtn" href="#about">ABOUT US</a>
+                <div class="dropdown-content"><a href="about.html">GRILLI</a>
+                <a href="contact.html">CONTACT US</a>
+            </div>
+            </li>
+            </ul>
+        </nav>
+        <button class="btn btn-secondary" id="reservation"><span class="text text-1">reserver une table</span><span class="text text-2">reserver une table</span></button>
+        <button class="btn btn-secondary" id="cadeaux"><span class="text text-1">bons cadaux</span><span class="text text-2">bons cadaux</span></button>
+
+         <script src="project.js"></script>
+        </header>
+  <!--labo-->
+    <section class="grilli"> 
+    	 <div class="slideshow-container">
+        <div class="main-image">
+            <img id="displayed-image" src="k1.jfif" alt="Main Display">
+        </div>
+        <div class="thumbnail-container">
+            <img class="thumbnail" src="k1.jfif" alt="Thumbnail 1">
+            <img class="thumbnail" src="k2.jfif" alt="Thumbnail 2">
+            <img class="thumbnail" src="k3.jfif" alt="Thumbnail 3">
+            <img class="thumbnail" src="k4.jfif" alt="Thumbnail 4">
+            <img class="thumbnail" src="k5.jfif" alt="Thumbnail 5">
+            <img class="thumbnail" src="k6.jfif" alt="Thumbnail 6">
+            <img class="thumbnail" src="k7.jfif" alt="Thumbnail 7">
+            
+        </div>
+    </div>
+   </section>
+  
+        <!--footer-->
+        <footer class="footer">
+    <div class="footer-sec">
+    <div class="div1">
+        <ul class="column-list">
+            <li ><a href="project.html" class="hover-underline">Home</a></li>
+            <li><a href="#" class="hover-underline">Menus</a></li>
+            <li><a href="#" class="hover-underline">About us</a></li>
+            <li ><a href="#" class="hover-underline">Our Chefs</a></li>
+            <li ><a href="contact.html" class="hover-underline">Contact</a></li>
+        </ul>
+    </div>
+    <div class="div2">
+        <a href="project.html"><img src="logo.svg"></a>
+        <address class="menu-description">Restaurant St, Delicious City, London 9578, UK</address>
+        <a href="mailto:ibtissemdhibii@gmail.com">booking@grill.com</a>
+        <a href="tel:+21621446804">booking request : +216 21 446 804</a>
+        <p class="menu-description">Open : 09:00 am - 01:00 pm</p>
+
+          <div class="squaresep">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <h2 class="serviceTiltle">Get News & Offers</h2>
+          <p class="menu-description">Subscribe us & Get<span class="offre"> 25% Off.</span></p>
+          <form class="reserv-input2">
+         
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="reserv-form-elm">
+          
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
+
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
+    </div>
+    <div class="div3">
+        <a href="#"><img src="fb.png" class="social"></a>
+        <a href="#"><img src="insta.png" class="social"></a>
+        <a href="#"><img src="twitter.png" class="social"></a>
+        <a href="#"><img src="yt.png" class="social"></a>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>© 2022 Grilli. All Rights Reserved | Crafted by
+     <a href="#">codewithsadee</a>
+    </p>
+</div>
+</footer>
+</body>
+</html>

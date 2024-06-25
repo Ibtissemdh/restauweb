@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+	<link rel="stylesheet" href="projet.css" />
+		
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+	.breakfast{
+		display:flex;
+		flex-direction: column;
+		margin-top:-10px;
+		padding-top: 100px;
+	}
+	.bande{
+		background-image: url("bb.jpg");
+		background-position: center;
+        background-size: 100% 170%;
+        background-repeat: no-repeat;
+        text-align: center;
+        height:300px;
+	}
+     .bande2{
+		background-image: url("p1.jpg");
+		background-position: center;
+        background-size: 100% 170%;
+        background-repeat: no-repeat;
+        text-align: center;
+        height:300px;
+	}
+	.bande .serviceTiltle,.bande2 .serviceTiltle{
+		color: black;
+		font-weight: bolder;
+		font-size: 4.0em;
+		padding-top: 100px;
+	}
+	.breakfast-menu{
+		padding-top: 100px;
+		padding-inline:50px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+	.card{
+		width:380px;
+		height: 400px;
+		position: relative;
+		border-radius: 10px;
+	}
+	.img-box{
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+	}
+	.card .img-box img{
+		width:100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: inherit;
+		transition: 0.5s ease-in-out;
+	}
+	.card::after{
+		content: "";
+		position: absolute;
+		inset:0;
+		border:2px solid var(--gold);
+		border-radius: inherit;
+		opacity: 0;
+		transition: 0.4s ease-in-out;
+
+	}
+	.card:hover img{
+		filter:grayscale(1) brightness(0.5);
+	}
+	.card:hover::after{
+		opacity: 1;
+		inset:20px;
+	}
+	.content{
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: white;
+
+	}
+	.carte{
+		margin-top:10px;
+		margin-bottom: -50px;
+		padding-block:50px;
+		background-image: url(img-pattern.svg);
+		background-position: center;
+        background-repeat: repeat;
+
+	}
+	.carte div{
+		background-color: var(--gray2);
+		border-radius: 10px;
+		border:2px solid var(--gold);
+		width:40%;
+		height: 60%;
+		margin:auto;
+
+	}
+
+	.carte ul{
+		list-style-type: none;
+		color: white;
+		font-size: 1.0em;
+		margin-top:-50px;
+		padding-left: 50px;
+		line-height: 2em;
+
+	}
+	.Appetizers .grid-list::before{
+      	content: "";
+      	position: absolute;
+      	top:0px;
+      	left:50%;
+      	bottom:0%;
+      	height: 295px;
+       border-inline: 1px solid #272525;
+      }
+    .lunch{
+    	margin-block:0px;
+    	padding-top: 0px;
+    }
+
+</style>
+</head>
+<body>
+  <header><div class="logo" ><a href="project.html"><img src="logo.svg" ></a></div>
+        <nav>
+          
+            <ul>
+                <li ><a href="project.html">HOME</a></li>
+                <li class="dropdown"><a class="dropbtn" href="#lacarte">MENU</a>
+                <div class="dropdown-content"><a href="#lacarte">la carte</a>
+                    <a href="menu.html">menu</a>
+                    </div></li>
+                <li class="dropdown" ><a class="dropbtn" href="chef.html">OUR CHEFS</a></li>
+                <li class="dropdown"><a class="dropbtn" href="#">privatisation</a>
+                <div  class="dropdown-content"><a href="entrep.html">Entreprise laboratoire</a>
+                    <a href="eventpriv.html">Evenment prive </a>
+                    <a href="priv.html">privatisation</a>
+                </div>
+                </li>
+                <li class="dropdown"><a  class="dropbtn" href="#about">ABOUT US</a>
+                <div class="dropdown-content"><a href="about.html">GRILLI</a>
+                <a href="contact.html">CONTACT US</a>
+            </div>
+            </li>
+            </ul>
+        </nav>
+        <button class="btn btn-secondary" id="reservation"><span class="text text-1">reserver une table</span><span class="text text-2">reserver une table</span></button>
+        <button class="btn btn-secondary" id="cadeaux"><span class="text text-1">bons cadaux</span><span class="text text-2">bons cadaux</span></button>
+
+        
+        </header>
+<!--Menu-->
+<!--breakfast-->
+<section class="breakfast">
+	<div class="bande"><h1 class="serviceTiltle">BreakFast</h1></div>
+	
+	<div class="breakfast-menu">
+		<div >
+		<div class="para1">Classique</div>
+		<div class="card">
+			
+			<div class="img-box">
+			<img src="b1.jfif" alt="breakfast classique">
+			</div>
+			<div class="content">
+				<h3>La Classique 15 DT</h3>
+				<p class="list"><ul>
+					<li>Boisson chaude (Café, Thé, Crème, Chocolat)</li>
+					<li>Viennoiserie (croissant ou pain au chocolat) OU Tartine baguette, beurre et confiture (1/2 baguette)</li>
+					<li>Jus de fruits au choix ( Pomme, orange, ananas)</li>
+				</ul></p>
+			</div>
+			
+         </div>
+		</div>
+		<div >
+			<div class="para1">Grilli</div>
+			<div class="card">
+			<div class="img-box">
+			<img src="b2.jfif" alt="breakfast classique">
+			</div>
+			<div class="content">
+				<h3>LA Grilli 25 DT</h3>
+				<p class="list"><ul>
+					<li>Boisson chaude (Café, Thé, Crème, Chocolat)</li>
+					<li>Viennoiserie (croissant ou pain au chocolat) OU </li>
+					<li>Tartine baguette, beurre et confiture (1/2 baguette)</li>
+					<li>Jus de fruits au choix ( Pomme, orange, ananas)</li>
+					<li>Verrine de fruits frais</li>
+				</ul></p>
+			</div>
+         </div>
+		</div>
+		<div >
+			<div class="para1">CONTINENTAL </div>
+			<div class="card">
+			<div class="img-box">
+			<img src="b3.jfif" alt="breakfast classique">
+			</div>
+			<div class="content">
+				<h3>LE CONTINENTAL 35 DT</h3>
+				<p class="list"><ul>
+					<li>Boisson chaude (Café, Thé, Crème, Chocolat)</li>
+					<li>Viennoiserie (croissant ou pain au chocolat)</li>
+					<li>Tartine au pain baguette, beurre et confiture maison (1/2 baguette, confiture)</li>
+					<li>Omelette au choix (nature ou fromage)</li>
+					<li>Assiette de fromages</li>
+					<li>Jus de fruits au choix ( Pomme, orange, ananas)</li>
+					<li>Verrine de fruits frais</li>
+					
+				</ul></p>
+			</div>
+         </div>
+		</div>
+
+	</div>
+	<div class="carte">
+		<div>
+		<h3 class="serviceTiltle">A LA CARTE </h3>
+		<p class="para">
+			<ul>
+				<li>Madeleine maison - 1.00DT</li>
+				<li>Cannelés x3 - 2.50DT </li>
+				<li>Viennoiserie (croissant ou pain au chocolat) - 2,50DT</li>
+				<li>Tartine au pain baguette, beurre et confiture (1/2 baguette) - 3,00DT</li>
+				<li> Oeufs au plat, brouillés ou omelette nature - 8,00DT</li>
+				<li>Omelette au choix (fromage) - 10,00DT</li>
+			</ul>
+		</p>
+		</div>
+	</div>
+</section>
+<!--lunch-->
+<section class="lunch">
+	<div class="bande2"><h1 class="serviceTiltle">L U N C H</h1></div>
+  <section class="sec-menu menu about Appetizers" >
+            <div class="serviscon">
+            	<p class="para1">Appetizers</p>
+            </div>
+
+            <ul class="grid-list">
+
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent3.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Salade aux restes de crevettes</a>
+                        </h3>
+                    </div>
+                    <span class="prix">30.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Salade, orange, le jus de ½ citron frais, huile d’olive,  vinaigre balsamique, moutarde en grains.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent5.webp" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Ceviche de merlan</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">20.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+           <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent2.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Butternut Pumpkin</a>
+                        </h3>
+                    
+                    </div>
+                    <span class="prix">15.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="ent4.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Tokusen Wagyu</a>
+                        </h3>
+                    </div>
+                    <span class="prix">30.00 DT</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+   
+        </ul>
+         
+        </section>
+        <!--plat principale-->
+         <section class="sec-menu menu about" >
+            <div class="serviscon">
+            	<p class="para1">Main Course</p>
+            </div>
+
+            <ul class="grid-list">
+
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu-1.png" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Greek Salad</a>
+                        </h3>
+                        <span class="menu-span">Seasonal</span>
+                    </div>
+                    <span class="prix">$25.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu-2.png" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Lasagne</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">$40.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+           <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu-3.png" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Butternut Pumpkin</a>
+                        </h3>
+                    
+                    </div>
+                    <span class="prix">$10.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu-4.png" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Tokusen Wagyu</a>
+                        </h3>
+                        <span class="menu-span">NEW</span>
+                    </div>
+                    <span class="prix">$39.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu-5.png" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Olivas Rellenas</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">$25.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+           <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu-6.png" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Olivas Rellenas</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">$25.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+            <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu7.jpg" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Riz au Crevette</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">$25.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+                  </p>
+
+                </div>
+           </div>
+       </li> 
+         <li >
+            	<div class="menu-li-card">
+         
+                <div ><img  src="menu8.jpg" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Biff au légumes</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">$25.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+        <li >
+            	<div class="menu-li-card">
+             <div ><img  src="menu9.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Spagetti fruit de mer</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">$25.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+                  </p>
+
+                </div>
+           </div>
+       </li>
+        <li >
+            	<div class="menu-li-card">
+             <div ><img  src="menu10.jfif" class="imgcard"></div>
+                 <div >
+                  <div class="description">
+                    <div  class="menu-op">
+                    	<h3 class="serviceTiltle">
+                      <a href="#" >Spagetti polonaise</a>
+                        </h3>
+                        
+                    </div>
+                    <span class="prix">$25.00</span>
+                  </div>
+                  
+                  <p class="menu-description">
+                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+                  </p>
+
+                </div>
+           </div>
+       </li>  
+        </ul>
+         
+    
+     </section> 
+     <!--dessert-->  
+        </section>
+                <!--footer-->
+        <footer class="footer">
+    <div class="footer-sec">
+    <div class="div1">
+        <ul class="column-list">
+            <li ><a href="project.html" class="hover-underline">Home</a></li>
+            <li><a href="#" class="hover-underline">Menus</a></li>
+            <li><a href="#" class="hover-underline">About us</a></li>
+            <li ><a href="#" class="hover-underline">Our Chefs</a></li>
+            <li ><a href="contact.html" class="hover-underline">Contact</a></li>
+        </ul>
+    </div>
+    <div class="div2">
+        <a href="project.html"><img src="logo.svg"></a>
+        <address class="menu-description">Restaurant St, Delicious City, London 9578, UK</address>
+        <a href="mailto:ibtissemdhibii@gmail.com">booking@grill.com</a>
+        <a href="tel:+21621446804">booking request : +216 21 446 804</a>
+        <p class="menu-description">Open : 09:00 am - 01:00 pm</p>
+
+          <div class="squaresep">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <h2 class="serviceTiltle">Get News & Offers</h2>
+          <p class="menu-description">Subscribe us & Get<span class="offre"> 25% Off.</span></p>
+          <form class="reserv-input2">
+         
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="reserv-form-elm">
+          
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
+
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
+    </div>
+    <div class="div3">
+        <a href="#"><img src="fb.png" class="social"></a>
+        <a href="#"><img src="insta.png" class="social"></a>
+        <a href="#"><img src="twitter.png" class="social"></a>
+        <a href="#"><img src="yt.png" class="social"></a>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>© 2022 Grilli. All Rights Reserved | Crafted by
+     <a href="#">codewithsadee</a>
+    </p>
+</div>
+</footer>
+</body>
+</html>
